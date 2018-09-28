@@ -1,0 +1,42 @@
+﻿@model SistemaLoja.Models.Ordem
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ordem</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Customizar.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customizar.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrdemData)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrdemData)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrdemStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrdemStatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OrdemId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<SistemaLoja.Models.Ordem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Customizar.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrdemData)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrdemStatus)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customizar.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrdemData)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrdemStatus)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.OrdemId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.OrdemId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.OrdemId })
+        </td>
+    </tr>
+}
+
+</table>
